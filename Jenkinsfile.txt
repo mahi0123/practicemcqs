@@ -16,25 +16,7 @@ pipeline {
 
     }
 
-    stage('test') {
-
-      steps {
-
-        echo 'Hello World'
-
-      }
-
- }
-
-    stage('deploy') {
-
-      steps {
-
-        echo 'Hello World'
-
-      }
-
-    }
+   
 
  }
 }
