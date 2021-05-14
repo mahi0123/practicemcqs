@@ -6,7 +6,7 @@ pipeline {
 
  stages {
 
-    stage('build in master') {
+    stage('build') {
 
       steps {
 
@@ -16,55 +16,7 @@ pipeline {
 
     }
 
-    stage('test in master') {
-
-  when {
-
-  branch comparator: 'EQUALS', pattern: 'test'
-
-  }
-
-      steps {
-
-        echo 'Hello World'
-
-      }
-
- }
-
-    stage('deploy in master') {
-
-      steps {
-
-        echo 'Hello World'
-
-      }
-
-    }
-
- stage('build') {
-
- when {
-
-  branch comparator: 'EQUALS', pattern: 'test'
-
-  }
-
-      steps {
-
-        echo 'Hello World'
-
-      }
-
-    }
-
-    stage('test') {
-
-  when {
-
-  branch comparator: 'EQUALS', pattern: 'test'
-
-  }
+    stage('mahesh') {
 
       steps {
 
@@ -76,12 +28,6 @@ pipeline {
 
     stage('deploy') {
 
- when {
-
-  branch comparator: 'EQUALS', pattern: 'test'
-
-  }
-
       steps {
 
         echo 'Hello World'
@@ -91,21 +37,7 @@ pipeline {
     }
 
  }
-
- post {
-
- always {
-
-  cleanWs()
-
- }
-
- }
-
 }
-
-
-
 
 
 
